@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/action"
+    android:label="Action"
+    app:startDestination="@id/actionFragment">
+
+    <fragment
+        android:id="@+id/actionFragment"
+        android:name="com.dmitriy.instagramclone.app.screens.main.tabs.action.ActionFragment"
+        android:label="action"
+        tools:layout="@layout/fragment_action">
+        <action
+            android:id="@+id/action_actionFragment_to_friendsFragment"
+            app:destination="@id/friendsFragment" />
+    </fragment>
+    <fragment
+
+        android:id="@+id/friendsFragment"
+        android:name="com.dmitriy.instagramclone.app.screens.main.tabs.action.FriendsFragment"
+        android:label="Friends"
+        tools:layout="@layout/fragment_friends">
+        <action
+            android:id="@+id/action_friendsFragment_to_recommendsFragment"
+            app:destination="@id/recommendsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recommendsFragment"
+        android:name="com.dmitriy.instagramclone.app.screens.main.tabs.action.RecommendsFragment"
+        android:label="Recommends Friends"
+        tools:layout="@layout/fragment_recommends" />
+</navigation>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">InstagramClone</string>
+
+    <string name="action">Action</string>
+    <string name="friends">Friends</string>
+    <string name="recommends">recommends</string>
+    <string name="back">back</string>
+    <string name="nickname_text">Иван Сахалинов</string>
+    <string name="email_text">ivansahalinov@gmail.com</string>
+    <string name="video">Video</string>
+    <string name="name">Name</string>
+    <string name="job">Job</string>
+    <string name="update_user">Update User</string>
+    <string name="add_user">Add User</string>
+    <string name="loading">Идет загрузка...</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="registered">Registered</string>
+    <string name="setting">Setting</string>
+    <string name="logout">logout</string>
+    <string name="search">Search</string>
+    <string name="action_back">action back</string>
+    <string name="profile">Profile</string>
+</resources>
