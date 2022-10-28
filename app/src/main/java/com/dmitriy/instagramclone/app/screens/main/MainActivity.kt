@@ -73,8 +73,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater).apply { setContentView(root) }
         setSupportActionBar(binding.toolbar)
 
-        // what is it
-
         val navController = rootNavController()
         prepareRootNavController(navController)
         clearActionBarData()
