@@ -1,5 +1,5 @@
 # NavigationSystem
-Navigation System
+Components:
 
 - Kotlin
 - MVVM
@@ -10,3 +10,7 @@ Navigation System
 - DiffUtil
 - Coroutines
 - Gson
+
+Folder structure:
+
+app &#172;
