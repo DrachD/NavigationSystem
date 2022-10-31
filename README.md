@@ -13,5 +13,8 @@ Components:
 
 Folder structure:
 
-app &#172;
-    |
+app adapter
+    model
+    screens
+    utils
+    sources
