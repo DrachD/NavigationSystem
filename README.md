@@ -14,3 +14,4 @@ Components:
 Folder structure:
 
 app &#172;
+    |
