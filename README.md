@@ -10,6 +10,7 @@ Components:
 - DiffUtil
 - Coroutines
 - Gson
+- Threads
 
 Folder structure:
 
