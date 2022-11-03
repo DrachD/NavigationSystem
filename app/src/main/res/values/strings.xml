@@ -12,7 +12,7 @@
     <string name="job">Job</string>
     <string name="update_user">Update User</string>
     <string name="add_user">Add User</string>
-    <string name="loading">Идет загрузка...</string>
+    <string name="loading">Идет загрузка…</string>
     <string name="sign_up">Sign Up</string>
     <string name="email">Email</string>
     <string name="password">Password</string>

@@ -11,6 +11,7 @@ import androidx.lifecycle.Lifecycle
 import com.dmitriy.instagramclone.R
 import com.dmitriy.instagramclone.app.model.peoples.entities.UserData
 import com.dmitriy.instagramclone.app.screens.main.tabs.home.HomeViewModel
+import com.dmitriy.instagramclone.app.utils.downloader.PhotoUploader
 import com.dmitriy.instagramclone.app.utils.findTopNavController
 import com.dmitriy.instagramclone.app.utils.getBaseParcelable
 import com.dmitriy.instagramclone.databinding.FragmentUserDetailsBinding
@@ -58,6 +59,7 @@ class UserDetailsFragment : Fragment(R.layout.fragment_user_details) {
         binding.apply {
             nicknameTextView.text = "${data?.first_name} ${data?.last_name}"
             emailTextView.text = data?.email
+            PhotoUploader(userIconImageView).execute(data?.avatar)
         }
 
         initMenuProvider()

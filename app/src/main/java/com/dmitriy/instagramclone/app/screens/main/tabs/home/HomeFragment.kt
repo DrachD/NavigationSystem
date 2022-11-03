@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.dmitriy.instagramclone.R
 import com.dmitriy.instagramclone.app.adapter.ListUsersAdapter
 import com.dmitriy.instagramclone.app.model.peoples.entities.UserData
+import com.dmitriy.instagramclone.app.screens.main.MainActivity
 import com.dmitriy.instagramclone.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -66,7 +67,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun initRecyclerView() {
-        adapter = ListUsersAdapter {
+        adapter = ListUsersAdapter(requireActivity() as MainActivity) {
             navigateToUserDetails(it)
         }
 

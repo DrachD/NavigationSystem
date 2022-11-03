@@ -7,9 +7,13 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.dmitriy.instagramclone.app.model.peoples.entities.UserData
+import com.dmitriy.instagramclone.app.screens.main.MainActivity
+import com.dmitriy.instagramclone.app.utils.downloader.PhotoUploader
 import com.dmitriy.instagramclone.databinding.ItemListUserLayoutBinding
+import kotlinx.coroutines.*
 
 class ListUsersAdapter(
+    private val activity: MainActivity,
     private val listener: (UserData) -> Unit
 ) : RecyclerView.Adapter<ListUsersAdapter.ListUsersHolder>() {
 
@@ -47,6 +51,14 @@ class ListUsersAdapter(
         holder.binding.apply {
             nicknameTextView.text = "${userItem.first_name} ${userItem.last_name}"
             emailTextView.text = userItem.email
+            PhotoUploader(userIconImageView).execute(userItem.avatar)
+
+//            activity.loadIcon(userItem.avatar) {
+//                //userIconImageView.setImageBitmap(it)
+//            }
+//            Picasso.get()
+//                .load(userItem.avatar)
+//                .into(userIconImageView)
         }
         holder.itemView.setOnClickListener {
             listener.invoke(userItem)

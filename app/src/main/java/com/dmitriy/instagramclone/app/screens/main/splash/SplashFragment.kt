@@ -56,7 +56,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
     }
 
     private fun observeStateSignInEvent() = viewModel.stateSignInEvent.observe(viewLifecycleOwner) { isSignedIn ->
-        action = if (false) {
+        action = if (isSignedIn) {
             getActionTabsDestination()
         } else {
             getActionSignInDestination()

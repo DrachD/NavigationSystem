@@ -6,7 +6,7 @@ import com.dmitriy.instagramclone.app.Singleton
 import com.dmitriy.instagramclone.app.model.accounts.UserRepository
 
 class SplashViewModel(
-    private val userRepository: UserRepository = Singleton.userRepository
+    userRepository: UserRepository = Singleton.userRepository
 ) : ViewModel() {
 
     private val _stateSignInEvent = MutableLiveData<Boolean>()

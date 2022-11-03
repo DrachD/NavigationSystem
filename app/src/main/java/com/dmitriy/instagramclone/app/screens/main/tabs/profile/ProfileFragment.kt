@@ -27,12 +27,21 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.logoutButton.setOnClickListener { onLogoutButtonPressed() }
+    }
+
     override fun onDestroy() {
         _binding = null
         super.onDestroy()
     }
 
-    private fun goToSignInScreen() {
+    private fun onLogoutButtonPressed() {
+
+        viewModel.logout()
+
         findTopNavController().navigate(R.id.signInFragment, null,
             navOptions {
                 popUpTo(R.id.signInFragment) {
